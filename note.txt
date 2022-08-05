@@ -1,0 +1,55 @@
+CONFIGURATION
+the name email line_editing default_editor
+
+git config --global user.name "faysla ali".. for the space bcz we have spalce in the name
+git config --global user.email faysal@gmail.com 
+git config --global core.editor "code --wait" .. we are telling it to wait until we close the new 
+        window instance
+git config --global -e ... will open the default_editor to edit global settings
+
+
+ENDOFLINES
+    windows CR-LF(carriage return and line feed) \r \n
+    mac/linux (LF-line feed) \n
+
+    (in windows when user checks his code in to the repo,git should remove it from 
+    end of lines and when user checks out from the repo. git should update endof lines 
+    and add the CR Charracter
+        set autocrlf = true)
+    (when mac/linux user checks out from the repo , git should touch end of lines 
+    and if added accidentally , git should remove it when storing in to the repository 
+        set autocrlf = input ) 
+
+    core.autocrlf
+    git config --global core.autocrlf = input
+
+
+
+
+CREATING SNAPSHOTS OF YOUR CODE 
+
+FILES     STAGING AREA      REPOSITORY(hiddend file in your directory)
+file1     using add file1   using commit with message
+rm file1  using add file1 
+    `     will delete the file from staging area
+
+
+git compresses the content and doesnt store duplicate content 
+
+
+
+echo hello > file1.txt  write to a file1.txt
+echo hello >> file1.txt (>> means append)
+git add *.txt ... add all files with .txt extenstion
+
+git commit -m 'initial commit'... -m for message
+git commit ... to write shortdesc and long desc in the default editor
+
+git commit -am ""... -am(all modified files,m message)to skipp the stagging area 
+            and directly to the repo
+git ls-files ... files in our stagging area
+rm file1.txt ... git add file1.txt ... to stage the deletion
+git rm file1.txt .. git removes the file from both the directory and staging area
+
+mv file1.txt main.js ... rename file1.txt to main.js
+git mv file1.txt main.js ... both renaming and moving files
