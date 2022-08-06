@@ -61,3 +61,20 @@ GITIGNORE
 
 git status -s ... easier status check
 
+
+git diff --staged ... to see what we have in the staging area that is going to the next commit
+
+
+git log .... to see history of commits
+git log --oneline ... short summary of commit history
+gir log --oneline --reverse ...reverse the commit history order
+
+git show ... to see what exactly changed in specific commit 
+git show id  OR git partoftheid(as long as there is no another id that starts with that id)
+git show HEAD ... to see the last commit changes 
+git show HEAD~2 .. go down 2 steps from the last commit
+git show HEAD~1:thefile/.gitignore ... to see the last version of this commit or file
+
+
+git restore --staged file1.txt ... restore contents of file1 from the staging area
+
