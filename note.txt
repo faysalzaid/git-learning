@@ -13,10 +13,10 @@ ENDOFLINES
     mac/linux (LF-line feed) \n
 
     (in windows when user checks his code in to the repo,git should remove it from 
-    end of lines and when user checks out from the repo. git should update endof lines 
+    end of lines and when user checks out from the repo, git should update endof lines 
     and add the CR Charracter
         set autocrlf = true)
-    (when mac/linux user checks out from the repo , git should touch end of lines 
+    (when mac/linux user checks out from the repo , git shouldnt touch end of lines 
     and if added accidentally , git should remove it when storing in to the repository 
         set autocrlf = input ) 
 
@@ -56,4 +56,6 @@ git mv file1.txt main.js ... both renaming and moving files to stagging area
 
 GITIGNORE
 
+
+git status -s ... easier status check
 
