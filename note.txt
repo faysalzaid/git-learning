@@ -54,6 +54,8 @@ git rm file1.txt .. git removes the file from both the directory and staging are
 mv file1.txt main.js ... rename file1.txt to main.js
 git mv file1.txt main.js ... both renaming and moving files to stagging area
 
+git rm --cached file1.txt...removing file from staging area without removing it form 
+    the directory
 GITIGNORE
 
 
