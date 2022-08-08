@@ -1,7 +1,7 @@
 CONFIGURATION
 the name email line_editing default_editor
 
-git config --global user.name "faysla ali".. for the space bcz we have spalce in the name
+git config --global user.name "faysla ali".. for the space bcz we have space in the name
 git config --global user.email faysal@gmail.com 
 git config --global core.editor "code --wait" .. we are telling it to wait until we close the new 
         window instance
@@ -79,3 +79,9 @@ git show HEAD~1:thefile/.gitignore ... to see the last version of this commit or
 git restore --staged file1.txt ... restore file1 from the staging area (after file1.txt)
     the operations is in between staging area and the repo not staging area and working directory
 git restore file1.txt ... delete contents we added to this specific file
+
+git clean ... remove untracked files 
+
+git restore --source=HEAD~1 file1.txt... restore file from previous snapshot (one before that last) by looking git log
+    deleted file from the directory and from the staging area
+    restoring file from the commit before the last one
