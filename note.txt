@@ -78,7 +78,7 @@ git show HEAD~1:thefile/.gitignore ... to see the last version of this commit or
 
 git restore --staged file1.txt ... restore file1 from the staging area (after file1.txt)
     the operations is in between staging area and the repo not staging area and working directory
-git restore file1.txt ... delete contents we added to this specific file
+git restore file1.txt ... delete contents we added to this specific file/restore it from the repo 
 
 git clean ... remove untracked files 
 
