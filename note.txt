@@ -1,11 +1,11 @@
 CONFIGURATION
-the name email line_editing default_editor
+    the name email line_editing default_editor
 
-git config --global user.name "faysla ali".. for the space bcz we have space in the name
-git config --global user.email faysal@gmail.com 
-git config --global core.editor "code --wait" .. we are telling it to wait until we close the new 
-        window instance
-git config --global -e ... will open the default_editor to edit global settings
+    git config --global user.name "faysla ali".. for the space bcz we have space in the name
+    git config --global user.email faysal@gmail.com 
+    git config --global core.editor "code --wait" .. we are telling it to wait until we close the new 
+            window instance
+    git config --global -e ... will open the default_editor to edit global settings
 
 
 ENDOFLINES
@@ -28,66 +28,129 @@ ENDOFLINES
 
 CREATING SNAPSHOTS OF YOUR CODE 
 
-FILES     STAGING AREA      REPOSITORY(hiddend file in your directory)
-file1     using add file1   using commit with message
-rm file1  using add file1 
-    `     will delete the file from staging area
+    FILES     STAGING AREA      REPOSITORY(hiddend file in your directory)
+    file1     using add file1   using commit with message
+    rm file1  using add file1 
+        `     will delete the file from staging area
 
 
-git compresses the content and doesnt store duplicate content 
+    git compresses the content and doesnt store duplicate content 
 
 
 
-echo hello > file1.txt  write to a file1.txt
-echo hello >> file1.txt (>> means append)
-git add *.txt ... add all files with .txt extenstion
+    echo hello > file1.txt  write to a file1.txt
+    echo hello >> file1.txt (>> means append)
+    git add *.txt ... add all files with .txt extenstion
 
-git commit -m 'initial commit'... -m for message
-git commit ... to write shortdesc and long desc in the default editor
+    git commit -m 'initial commit'... -m for message
+    git commit ... to write shortdesc and long desc in the default editor
 
-git commit -am ""... -am(all modified files,m message)to skipp the stagging area 
-            and directly to the repo
-git ls-files ... files in our stagging area
-rm file1.txt ... git add file1.txt ... to stage the deletion
-git rm file1.txt .. git removes the file from both the directory and staging area
+    git commit -am ""... -am(all modified files,m message)to skipp the stagging area 
+                and directly to the repo
+    git ls-files ... files in our stagging area
+    rm file1.txt ... git add file1.txt ... to stage the deletion
+    git rm file1.txt .. git removes the file from both the directory and staging area
 
-mv file1.txt main.js ... rename file1.txt to main.js
-git mv file1.txt main.js ... both renaming and moving files to stagging area
+    mv file1.txt main.js ... rename file1.txt to main.js
+    git mv file1.txt main.js ... both renaming and moving files to stagging area
 
-git rm --cached file1.txt...removing file from staging area without removing it form 
-    the directory
-GITIGNORE
+    git rm --cached file1.txt...removing file from staging area without removing it form 
+        the directory
 
 
 git status -s ... easier status check
 
-
-git diff --staged ... to see what we have in the staging area that is going to the next commit
-
-
-git log .... to see history of commits
-git log --oneline ... short summary of commit history
-gir log --oneline --reverse ...reverse the commit history order
-git log --oneline --stat ... more info about --oneline(to see files lines added)
-git log --oneline --after="2022-08-06"...  commits after this date 
-git log --oneline --before="2022-08-06"... commits before this date
-git log --oneline author="FaysalZaid"... its case sensitive
+GIT DIFF
+    git diff --staged ... to see what we have in the staging area that is going to the next commit
+    git diff HEAD~1 HEAD ... to see difference between the two commits
 
 
+GIT LOG
+    git log .... to see history of commits
+    git log --oneline ... short summary of commit history
+    gir log --oneline --reverse ...reverse the commit history order
+    git log --oneline --stat ... more info about --oneline(to see files lines added)
+    git log --oneline --after="2022-08-06"...  commits after this date 
+    git log --oneline --before="2022-08-06"... commits before this date
+    git log --oneline author="FaysalZaid"... its case sensitive
+    git log --oneline -3 ... to see the last 3 commits
+    git log --oneline file1.txt ... to see all the history of this specific file
 
-git show ... to see what exactly changed in specific commit 
-git show id  OR git partoftheid(as long as there is no another id that starts with that id)
-git show HEAD ... to see the last commit changes 
-git show HEAD~2 .. go down/ 2 steps from the last commit
-git show HEAD~1: .gitignore ... to see the last version of this commit or file
-git show HEAD~1 --name-only ... to see the files that have been modified in this commit specifically
 
-git restore --staged file1.txt ... restore file1 from the staging area (after file1.txt)
-    the operations is in between staging area and the repo not staging area and working directory
-git restore file1.txt ... delete contents we added to this specific file/restore it from the repo 
+GIT SHOW
+    git show ... to see what exactly changed in specific commit 
+    git show id  OR git partoftheid(as long as there is no another id that starts with that id)
+    git show HEAD ... to see the last commit changes 
+    git show HEAD~2 .. go down/ 2 steps from the last commit
+    git show HEAD~1: .gitignore ... to see the last version of this commit or file
+    git show HEAD~1 --name-only ... to see the files that have been commited in this commit specifically
+    git show HEAD~1 --name-status ... to see the files modified/added in this specific commit
 
-git clean ... remove untracked files 
 
-git restore --source=HEAD~1 file1.txt... restore file from previous snapshot (one before that last) by looking git log
-    deleted file from the directory and from the staging area
-    restoring file from the commit before the last one
+RESTORATION
+    git restore --staged file1.txt ... restore file1 from the staging area (after file1.txt)
+        the operations is in between staging area and the repo not staging area and working directory
+    git restore file1.txt ... delete contents we added to this specific file/restore it from the repo 
+
+    git clean ... remove untracked files 
+
+    git restore --source=HEAD~1 file1.txt... restore file from previous snapshot (one before that last) by looking git log
+        deleted file from the directory and from the staging area
+        restoring file from the commit before the last one
+
+
+
+
+CHECKING OUT -> it will restore our working directory to the snapshot stored in that commit  
+    git checkout id(of the commit )
+    every git repo has a default branch called master 
+    as we create new commits master moves forward to point the last commit 
+    bcz we can have multiple braches gi needs to know what is the branch we are currently working on to do that it uses 
+        special pointer called head,with new commits head and master move together
+        and when cheout the head pointer moves to that commit separating from the master and this is called 
+            the detached head which means its not attached to a branch any more and in this we shouldnt create commit 
+            and if created a commit it will attache it self to the master branch leaving the created commit alone
+            to connect it with the master branch we do 
+            ---git checkout master
+    git log --oneline file1.txt ... to see all the commits that have touched this file
+    git checkout id file1.txt ... to checout file1 to its previous state or restoring it
+
+
+
+
+FINDING BUGS USING BISECT
+    findig the commit that introduced the bug
+    git bisect start
+    git bisect bad ... to through the last commit as bad 
+    git bisect good id(of a commit that was perfect)
+
+        ---before
+    HEAD -<if issue the bug was introduced somewhere in after commits  
+    else if head is a good commit then whe check the before half of the commits
+        ---after 
+
+
+
+CONTRIBUTERS 
+
+    git shortlog ... to see the contributers and summary of commit messages
+    git sortlog -n ... sort based on the no of commits 
+    git shortlog -s ... to supress the commits and show the name of the contributer with no of commits
+    git shortlog -e ... to see email address of the contributer
+
+
+
+
+
+
+BLAMING
+    finding the auther of a particular line
+    git blame file1.txt
+    git blame -e file1.txt
+
+TAGGING
+    bookmark certain points in the history of our project like the commit that represent a given version
+    git tag v1.0 ...to tag the last commit 
+    git tag v1.0 id ... to tag specific commit
+    git checkout v1.0 ... helps you checout using the tag
+    git tag ... to see all the tags we have created 
