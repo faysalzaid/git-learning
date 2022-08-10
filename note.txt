@@ -105,7 +105,7 @@ CHECKING OUT -> it will restore our working directory to the snapshot stored in 
     git checkout id(of the commit )
     every git repo has a default branch called master 
     as we create new commits master moves forward to point the last commit 
-    bcz we can have multiple braches git needs to know what is the branch we are currently working on to do that it uses 
+    bcz we can have multiple braches gi needs to know what is the branch we are currently working on to do that it uses 
         special pointer called head,with new commits head and master move together
         and when cheout the head pointer moves to that commit separating from the master and this is called 
             the detached head which means its not attached to a branch any more and in this we shouldnt create commit 
