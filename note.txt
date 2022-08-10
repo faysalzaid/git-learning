@@ -111,9 +111,12 @@ CHECKING OUT -> it will restore our working directory to the snapshot stored in 
             the detached head which means its not attached to a branch any more and in this we shouldnt create commit 
             and if created a commit it will attache it self to the master branch leaving the created commit alone
             to connect it with the master branch we do 
-            ---git checkout master
+
+
     git log --oneline file1.txt ... to see all the commits that have touched this file
     git checkout id file1.txt ... to checout file1 to its previous state or restoring it
+    git add file1.txt .. to stage it before merging with the master branch / means save your new lines and stage them
+    git checkout master
 
 
 
