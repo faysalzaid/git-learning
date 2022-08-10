@@ -171,3 +171,24 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
     git branch -m bugfix bugfix/sign-in-form ... to rename bugfix to the new name 
     git branch -d bugfix/sign-in-from ... to delete the branch( will ask you to merge it first)
     git branch -D bugfix/sign-in-form ... to force deleting the branch
+    git log master..bug-fix/sign-in-form ... to see what changes are available in bugfix thats not in master 
+    git diff --name-only bugfix  ... to see files that will be changed when merging 
+    git diff bugfix ... this will also compare the current branch with the bugfix
+
+    STACHES -> means storing it in a save place 
+        git stash push -m "will come for more edditing"
+            this will store it in a save place instead of committing changes 
+        git stash list ... to see all the stashes 
+        git stash show ... to see which line of codes was changed 
+        git stash show 1 .... to see stash no one 
+        git stash apply 1 ... to apply changes in this stash 
+            when done we want to remove it 
+        git stash drop 1 ... to drop the first stash from the stash list and clean it 
+        git stash clear ... to remove all stashes 
+    Merging -> bringing changes from one branch to another
+        two types:
+            1: fast-forwad merges -> if there are no changes in master but only in the new branch it will fast-forward the master and merge  
+                if branches havent diverged
+            2: 3-way merges -> the new commits from the master and the new changes in the new branch along with the previous 
+            branch/snapshot and  git creates new commit to merge them and its called (merge commit)
+                if branches diverged
