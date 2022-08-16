@@ -192,3 +192,11 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
             2: 3-way merges -> the new commits from the master and the new changes in the new branch along with the previous 
             branch/snapshot and  git creates new commit to merge them and its called (merge commit)
                 if branches diverged
+
+
+
+    HFKSDHFKLASDJFHSD
+    JKSHDFJKLSDHFLSDJ
+    HSKDJFHSDKFHSDLLJSFHS
+    KJSHDFJSDHFLSDKJHFSDL
+    
