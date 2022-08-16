@@ -166,7 +166,6 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
     allows us to work on different work items without messing with the main line of work 
 
     git branch bugfix ... creates branch with this name
-<<<<<<< HEAD
     git brach ... to see list of braches
     git switch bugfix ... to switch to this branch
     git branch -m bugfix bugfix/sign-in-form ... to rename bugfix to the new name 
@@ -198,13 +197,3 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
         git merge bugfix ... to merge fastforward with the master branch 
         git merge --no-ff bugfix ... we are telling git even if there is fastforward dont do it 
         git config ff no ... this will disable fastforward automatically in your in your git
-=======
-    git braches ... to see list of braches
-    git switch bugfix ... to switch to this branch
-    git branch -m bugfix bugfix/sign-in-form ... to rename bugfix to the new name 
-    git branch -d bugfix/sign-in-from ... to delete the branch( will ask you to merge it first)
-    git branch -D bugfix/sign-in-form ... to force deleting the branch 
-
-
-
->>>>>>> bugfix
