@@ -196,4 +196,4 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
         git log --oneline --all --graph  ... the graph flag gives us better representation of the branches 
         git merge bugfix ... to merge fastforward with the master branch 
         git merge --no-ff bugfix ... we are telling git even if there is fastforward dont do it 
-        git config ff no ... this will disable fastforward automatically in your repo
+        git config ff no ... this will disable fastforward automatically in your in your git
