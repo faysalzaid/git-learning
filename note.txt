@@ -199,3 +199,7 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
         git config ff no ... this will disable fastforward automatically in your in your git
         git merge --- for both 3-way and fastforward 
         git branch --merged ... to see list of branches that merged 
+        git branch --no-merged ... to see list of not merged branches 
+
+        CONFILICTS:-> happen when same file has been changed in different ways in two branches  
+                if file has been deleted in one branch and changed in another 
