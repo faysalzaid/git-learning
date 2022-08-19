@@ -243,9 +243,8 @@ SQUASHING -> Squashing a commit in Git means that you are taking the changes
             git merge --squash bugfix
             git branch -D bugfix ... delete it 
 
-GETTING A FILES FROM ANOTHER BRANCH 
-
-            
+GETTING A FILES FROM ANOTHER BRANCH/commit of another branch 
+            git restore --source=bugfix --file1.txt
 
 
 
