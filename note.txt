@@ -45,7 +45,7 @@ CREATING SNAPSHOTS OF YOUR CODE
     git commit -m 'initial commit'... -m for message
     git commit ... to write shortdesc and long desc in the default editor
 
-    git commit -am ""... -am(all modified files,m message)to skipp the stagging area 
+    git commit -am ""... -am(all modified files,m message)to stage and commit at the same time
                 and directly to the repo
     git ls-files ... files in our stagging area
     rm file1.txt ... git add file1.txt ... to stage the deletion
@@ -203,3 +203,54 @@ BRANCHING->diverge from main line of work and work on something else in isolatio
 
         CONFILICTS:-> happen when same file has been changed in different ways in two branches  
                 if file has been deleted in one branch and changed in another 
+            git merge feature1 ... to enter the merging state and solve the conflict 
+            git add file  ... to add the file 
+            git commit ... and commit it 
+            then you will have clean tree
+
+
+        TOOLS FOR RESOLVING CONFILICTS
+            kdiff 
+            p4merge
+            winmerge(windows only)
+
+
+        P4MERGE-CONFIGURATION
+            git config --global merge.tool p4merge ... for git configuation/ to use it as default merge tool 
+            git config --global mergetool.p4merge.path ""  ... telling git where to find it 
+            git mergetool 
+
+        git merge --abort ... to abort the merging
+
+        FAULTY MERGE 
+            resetting a merge 
+            resetting a head pointer we have 3 options 
+                soft -> git will have the head pointer point to a differenct snapshot in the snapshot/repo 
+                        staging area and working directory are not affected 
+                mixed -> default option, it will put that snapshot and put it in the staging area 
+                        staging area is affected
+                hard  -> git will put that snapshot and put it in the working directory/stagingarea
+                        both staging area and working directory are affected
+                git reset --hard HEAD~1 ... to reset the merge one step before the last one 
+                git reset --hard 123223 ... to reset to speicific id 
+
+        IF SHARED HISTORY THEN WE USE REVERT INSTEAD OF RESET 
+            git revert HEAD ... we want to revert the last commit, we also have to tell to revert to 1st parent of merge commit 
+            git revert -m 1 HEAD ... to revert back to the parent commit that both merged branches come from  
+
+SQUASHING -> Squashing a commit in Git means that you are taking the changes 
+            from one commit and adding them to the Parent Commit
+            git merge --squash bugfix
+            git branch -D bugfix ... delete it 
+
+GETTING A FILES FROM ANOTHER BRANCH 
+
+            
+
+
+
+
+            ksjhdfjksdhfksdjfhd
+            jhsdfhsdkfjhsdkfjhsdjkf
+            jksdfhsdjkfhsdjfhsdfh
+            jshdfjsdhfsdj
