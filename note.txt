@@ -44,6 +44,8 @@ CREATING SNAPSHOTS OF YOUR CODE
 
     git commit -m 'initial commit'... -m for message
     git commit ... to write shortdesc and long desc in the default editor
+    git commit --amend -m "the new message" ... this will rewrite the message of last commit 
+    git commit --amend --no-edit ... to add files to last commit without new commit message/new commit in general 
 
     git commit -am ""... -am(all modified files,m message)to stage and commit at the same time
                 and directly to the repo
@@ -242,6 +244,10 @@ SQUASHING -> Squashing a commit in Git means that you are taking the changes
             from one commit and adding them to the Parent Commit
             git merge --squash bugfix
             git branch -D bugfix ... delete it 
+
+
+REPASE-> moving commits from another branch and put them on top of master branch to have neat clean tree history 
+            for rewritting history 
 
 GETTING A FILES FROM ANOTHER BRANCH/commit of another branch 
             git restore --source=bugfix --file1.txt
