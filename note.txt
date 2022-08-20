@@ -248,4 +248,35 @@ GETTING A FILES FROM ANOTHER BRANCH/commit of another branch
 
 
 
+COLLABORATION->
+    git remote ... shows list of remote repositories , Remote Repository is a repository that is not in our machine, its not in the 
+        current repository
+    git remote -v ... verbose, we can see more detail about this repository
+    origin/master ... is a remote tracking branch 
+    if changes happen in the remote repo and we type additional data in the remote one then we merge the remote tracker 
+        which in our case is origin/master to our local rep master 
+        using 
+        git merge origin/master 
 
+    FETCHING
+        git fetch origin  OR  git fetch ... git will fetch the last commit in the remote repo to our working directory
+            that is if our branches havent diverged
+        git merge orgin/master ... 
+        git remote add origin https://github.com/faysalzaid/git-learning.git ... to add new repo to your current repo
+        to combine fetch+merge=PULL
+        git pull ... to pull from the remote repo 
+        git pull --rebase ... to have linear history and pull from remote repo  
+
+    PUSHING
+        git push master OR git push ... to push the current branch which is master/ use push only to push the current branch 
+            you are using  
+    
+    STORING CREDENTIALS 
+        git config --global credential.helper cache ... git will store our credentials in 15 minutes
+
+    
+    SHARING TAGS/Pushing Tags 
+        git tag v1.0
+        git push orgin v1.0 ... to push it to origin 
+        git push orgin --delete v1.0 ... to remove it from origin repo 
+        git tag -d v1.0 ... to delete this tag from your local repo
