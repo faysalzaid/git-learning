@@ -292,3 +292,7 @@ COLLABORATION->
                       branch to the origin branch using the following 
                       git switch -C feature1 origin/feature1 ... we are telling our local branch to point to the remote branch
                         or to track the remote branch 
+
+
+        Lets understand that we pull request in the github page inorder for us to have a discussion before 
+            we merge the branches 
