@@ -280,3 +280,15 @@ COLLABORATION->
         git push orgin v1.0 ... to push it to origin 
         git push orgin --delete v1.0 ... to remove it from origin repo 
         git tag -d v1.0 ... to delete this tag from your local repo
+
+    RELEASES -> to package our software along with source code, binary files and release notes 
+            when its production ready 
+    BRANCH SHARING 
+        git push -u origin feature1 ... this will push feature1 branch to origin remote repo / -u => upstream
+        git branch -vv ... to see all branches with their remote connection 
+        git push -d origin feature1 ... to delete it from origin/github repo /remote repo 
+
+        git fetch ... we are fetching from remote origin and if we created a new branch in the remote repo then we need to point our local 
+                      branch to the origin branch using the following 
+                      git switch -C feature1 origin/feature1 ... we are telling our local branch to point to the remote branch
+                        or to track the remote branch 
