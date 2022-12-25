@@ -31,7 +31,7 @@ CREATING SNAPSHOTS OF YOUR CODE
     FILES     STAGING AREA      REPOSITORY(hiddend file in your directory)
     file1     using add file1   using commit with message
     rm file1  using add file1 
-        `     will delete the file from staging area
+        `     will delete the file from directory
 
 
     git compresses the content and doesnt store duplicate content 
