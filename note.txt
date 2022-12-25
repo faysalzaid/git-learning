@@ -56,7 +56,7 @@ CREATING SNAPSHOTS OF YOUR CODE
 
     git rm --cached file1.txt...removing file from staging area without removing it form 
         the directory
-    git restore --staged file1.txt ... to unstage the prev command
+    git restore --unstage file1.txt ... to unstage the prev command
 
 
 
