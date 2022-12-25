@@ -74,7 +74,7 @@ GIT LOG
     git log --oneline --stat ... more info about --oneline(to see files lines added)
     git log --oneline --after="2022-08-06"...  commits after this date 
     git log --oneline --before="2022-08-06"... commits before this date
-    git log --oneline author="FaysalZaid"... its case sensitive
+    git log --oneline --author="FaysalZaid"... its case sensitive
     git log --oneline -3 ... to see the last 3 commits
     git log --oneline file1.txt ... to see all the history of this specific file
 
